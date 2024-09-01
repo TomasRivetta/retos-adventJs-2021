@@ -5,7 +5,7 @@
 | Día | Título                                                            | Dificultad  |                                    |
 | --- | ----------------------------------------------------------------- | ----------- | ---------------------------------- |
 | 01  | Contando ovejas para dormir                                       | Fácil       | [Ver solución](./reto-01/index.js) |
-| 02  | ¡Ayuda al elfo a listar los regalos!                              | Fácil       | [Ver solución]()                   |
+| 02  | ¡Ayuda al elfo a listar los regalos!                              | Fácil       | [Ver solución](./reto-02/index.js)                   |
 | 03  | El Grinch quiere fastidiar la Navidad                             | Normal      | [Ver solución]()                   |
 | 04  | ¡Es hora de poner la navidad en casa!                             | Normal      | [Ver solución]()                   |
 | 05  | Contando los días para los regalos                                | Fácil       | [Ver solución]()                   |
