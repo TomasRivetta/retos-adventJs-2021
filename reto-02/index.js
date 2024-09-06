@@ -24,13 +24,26 @@ Ten en cuenta que los tests pueden ser más exhaustivos... 😝 ¡Cuidado con co
 
  */
 
-const carta = 'bici coche balón _playstation bici coche peluche'
+const carta = "bici coche balón _playstation bici coche peluche";
 
 function listGifts(letter) {
   // ¡Tú puedes!
-  return {}
+
+  for (const element of letter) {
+    console.log(element);
+  }
+
+  // for (let i = 0; i < letter.length; i++) {
+  //   const element = letter[i];
+
+  //   console.log(element);
+  // }
+
+  // console.log(letter);
+
+  return {};
 }
 
-const regalos = listGifts(carta)
+const regalos = listGifts(carta);
 
-console.log(regalos)
+console.log(regalos);
