@@ -1,24 +1,28 @@
 /*
-Te ha llegado una carta ✉️ con todos los regalos que debes preparar. El tema es que es una cadena de texto y es muy difícil de leer 😱. ¡Menos mal que han puesto cada regalo separado por espacio! (aunque ten cuidado, porque al ser niños, igual han colado más espacios de la cuenta)
+Te ha llegado una carta ✉️ con todos los regalos que debes preparar. 
+El tema es que es una cadena de texto y es muy difícil de leer 😱. 
+¡Menos mal que han puesto cada regalo separado por espacio! 
+(aunque ten cuidado, porque al ser niños, igual han colado más espacios de la cuenta)
 
-Encima nos hemos dado cuenta que algunas palabras vienen con un _ delante de la palabra, por ejemplo _playstation, que significa que está tachado y no se tiene que contar.
+Encima nos hemos dado cuenta que algunas palabras vienen con un _ delante de la palabra, 
+por ejemplo _playstation, que significa que está tachado y no se tiene que contar.
 
-Transforma el texto a un objeto que contenga el nombre de cada regalo y las veces que aparece. Por ejemplo, si tenemos el texto:
-
-const carta = 'bici coche balón _playstation bici coche peluche'
+Transforma el texto a un objeto que contenga el nombre de cada regalo y las veces que aparece. 
+Por ejemplo, si tenemos el texto:
+  const carta = 'bici coche balón _playstation bici coche peluche'
 
 Al ejecutar el método debería devolver lo siguiente:
 
-const regalos = listGifts(carta)
+  const regalos = listGifts(carta)
 
-console.log(regalos)
+  console.log(regalos)
 
-{
-  bici: 2,
-  coche: 2,
-  balón: 1,
-  peluche: 1
-}
+  {
+    bici: 2,
+    coche: 2,
+    balón: 1,
+    peluche: 1
+  }
 
 Ten en cuenta que los tests pueden ser más exhaustivos... 😝 ¡Cuidado con contar espacios vacíos!
 
@@ -28,20 +32,17 @@ const carta = "bici coche balón _playstation bici coche peluche";
 
 function listGifts(letter) {
   // ¡Tú puedes!
-
-  for (const element of letter) {
-    console.log(element);
-  }
-
-  // for (let i = 0; i < letter.length; i++) {
-  //   const element = letter[i];
-
-  //   console.log(element);
-  // }
-
-  // console.log(letter);
-
-  return {};
+  const regalosValidos = letter
+    .trim()
+    .split(" ")
+    .filter((regalo) => !regalo.startsWith("_"));
+  return regalosValidos.reduce((result, regalo) => {
+    if (!result[regalo]) {
+      result[regalo] = 0;
+    }
+    result[regalo]++;
+    return result;
+  }, {});
 }
 
 const regalos = listGifts(carta);
